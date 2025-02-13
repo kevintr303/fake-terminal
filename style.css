@@ -1,0 +1,55 @@
+body {
+    background-color: #000;
+    color: #0f0;
+    font-family: "Courier New", Courier, monospace;
+    margin: 10px;
+    padding: 0;
+}
+
+#terminal {
+    width: 100%;
+    height: calc(100vh - 20px);
+    overflow-y: auto;
+}
+
+.line {
+    display: flex;
+    align-items: flex-start;
+    margin: 0;
+    padding: 0;
+    line-height: 1.5em;
+}
+
+.prompt {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+
+.input {
+    display: inline-block;
+    outline: none;
+    margin-left: 4px;
+    min-width: 10px;
+    caret-color: #0f0;
+}
+
+.suggestions {
+    position: absolute;
+    background-color: #333;
+    color: #0f0;
+    border: 1px solid #0f0;
+    padding: 2px 0;
+    margin-top: 2px;
+    z-index: 999;
+    font-family: "Courier New", Courier, monospace;
+}
+
+.suggestion-item {
+    padding: 2px 8px;
+    cursor: pointer;
+}
+
+.suggestion-item:hover {
+    background-color: #666;
+}
