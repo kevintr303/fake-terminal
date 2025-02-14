@@ -3,6 +3,8 @@ A **fully interactive, fake command-line interface**—built for fun, learning, 
 
 🚀 **[Try it here](https://kevintr303.github.io/fake-terminal/)**  
 
+![Fake Terminal Screenshot](assets/screenshots/terminal.gif)
+
 ---
 
 ## **🔧 Features**  
