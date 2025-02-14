@@ -116,6 +116,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function processCommand(command, lineElement) {
+        command = command.toLowerCase();
         const inputSpan = lineElement.querySelector(".input");
         inputSpan.contentEditable = "false";
 
@@ -165,7 +166,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function handleAutocomplete(inputSpan) {
-        const currentText = inputSpan.innerText.trim();
+        const currentText = inputSpan.innerText.trim().toLowerCase();
         const matching = Object.keys(commands)
             .filter(cmd => !commands[cmd].hidden)
             .filter(cmd => cmd.startsWith(currentText));
@@ -178,7 +179,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function showSuggestions(inputSpan) {
         clearSuggestions();
-        const currentText = inputSpan.innerText.trim();
+        const currentText = inputSpan.innerText.trim().toLowerCase();
         if (!currentText) return;
         const matching = Object.keys(commands)
             .filter(cmd => !commands[cmd].hidden)
